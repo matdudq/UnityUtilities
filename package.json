@@ -1,0 +1,14 @@
+{
+  "name": "com.matdudq.unity-unity-utilities",
+  "displayName": "Unity-Utilities",
+  "version": "1.0.0",
+  "unity": "2019.4",
+  "description": "Unity most popular utility scripts, which are required in every project.",
+  "dependencies": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/matdudq/UnityUtilities",
+    "revision": "49863d5e3bddb2500a97cfb5b9c837fae9ca760f"
+  }
+}
