@@ -55,7 +55,7 @@ namespace Utilities
 
         #region Unity methods
 
-        private void Awake()
+        protected virtual void Awake()
         {
             isApplicationQuitting = false;
 
