@@ -10,9 +10,6 @@ namespace Utilities
     public class PoolingSystem : SingletonMonoBehaviour<PoolingSystem>
     {
         #region Variables
-
-        [SerializeField, Tooltip("Should hide unused instances and Pooled components")] 
-        private bool maskPooling = true;
         
         private readonly Dictionary<GameObject, Pool> pools = new Dictionary<GameObject, Pool>();
 
@@ -27,7 +24,7 @@ namespace Utilities
         /// <param name="startPoolSize">Instances created at start</param>
         /// <param name="maskPooling">Should hide unused instances and <see cref="PooledObject"/> components</param>
         /// <returns><see cref="Pool"/> of <paramref name="prefab"/></returns>
-        public Pool Register(GameObject prefab, int startPoolSize = 0, bool? mask = null)
+        public Pool Register(GameObject prefab, int startPoolSize = 0)
         {
             if (prefab == null)
             {
