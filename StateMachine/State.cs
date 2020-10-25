@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Utilities.StateMachine
+namespace Utilities
 {
 	/// <summary>
 	/// Abstract state class for state machine use	

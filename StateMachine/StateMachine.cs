@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Utilities.StateMachine
+namespace Utilities
 {
 	/// <summary>
 	/// Class which stores states, changing states and sharing access to them. 

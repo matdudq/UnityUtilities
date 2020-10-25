@@ -45,12 +45,10 @@ namespace Utilities
         /// </summary>
         /// <param name="prefab">Prefab to instantiate</param>
         /// <param name="startSize">Number of instances created at start</param>
-        /// <param name="maskPooling">Should hide unused instances and <see cref="PooledObject"/> components</param>
         /// <exception cref="NullReferenceException">Prefab cannot br null</exception>
         /// <exception cref="ArgumentException">Prefab cannot be pooled instance</exception>
-        public Pool(GameObject prefab, int startSize = 0, bool maskPooling = true)
+        public Pool(GameObject prefab, int startSize = 0)
         {
-            MaskPooling = maskPooling;
             if (prefab == null)
             {
                 GameConsole.LogError(typeof(PoolingSystem), $"Prefab cannot be null");

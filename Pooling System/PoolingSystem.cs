@@ -41,7 +41,7 @@ namespace Utilities
                 return null;
             }
             
-            var pool = new Pool(prefab, startPoolSize, mask ?? maskPooling);
+            var pool = new Pool(prefab, startPoolSize);
             pools[prefab] = pool;
             return pool;
         }
