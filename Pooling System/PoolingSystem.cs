@@ -85,7 +85,24 @@ namespace Utilities
         {
             return GetOrRegisterPool(prefab.gameObject).Get(position, rotation).GetComponent<T>();
         }
-
+        
+        /// <summary>
+        /// Creates and returns collection of pooled objects.
+        /// </summary>
+        /// <param name="prefab">Pooled prefab</param>
+        /// <param name="count">Size of collection to return</param>
+        /// <typeparam name="T">Type of pooled prefab compenent</typeparam>
+        /// <returns>Collection of pooled objects.</returns>
+        public List<T> GetCollection<T>(T prefab, int count) where T : Component
+        {
+            List<T> collection = new List<T>();
+            for (int i = 0; i < count; i++)
+            {
+                collection.Add(GetOrRegisterPool(prefab.gameObject).Get().GetComponent<T>());
+            }
+            return collection;
+        }
+        
         #endregion Public methods
 
         #region Private methods
