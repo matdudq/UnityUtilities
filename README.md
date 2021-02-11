@@ -1,2 +1,2 @@
 # UnityUtilities
-Unity most popular utility scripts, which are required in every project. 
+Unity most usefull utility utilities, which are required in every project. 
