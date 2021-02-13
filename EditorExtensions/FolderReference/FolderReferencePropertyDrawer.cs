@@ -1,7 +1,6 @@
 ﻿#if UNITY_EDITOR
 using System.IO;
 using UnityEngine;
-using TKOU.Utilities;
 using UnityEditor;
 
 namespace Utilities
