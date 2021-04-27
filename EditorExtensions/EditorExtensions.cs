@@ -1,6 +1,6 @@
 ﻿#if UNITY_EDITOR
 
-using System.Collections.Generic;
+using System;
 using UnityEditor;
 using UnityEngine;
 
@@ -9,7 +9,7 @@ namespace Utilities.Editor
     /// <summary>
     /// Adds some useful methods for editor workflow improvements.
     /// </summary>
-    public static class AssetDatabaseExtension
+    public static class EditorExtensions
     {
         private const string MenuAssetPath = "Assets/Editor Extensions/";
         private const int Priority = 2000;
@@ -41,23 +41,6 @@ namespace Utilities.Editor
         {
             return Selection.assetGUIDs.Length == 1;
         }
-        
-        public static List<T> FindAssetsByType<T>() where T : UnityEngine.Object
-        {
-            List<T> assets = new List<T>();
-            string[] guids = AssetDatabase.FindAssets(string.Format("t:{0}", typeof(T)));
-            for( int i = 0; i < guids.Length; i++ )
-            {
-                string assetPath = AssetDatabase.GUIDToAssetPath( guids[i] );
-                T asset = AssetDatabase.LoadAssetAtPath<T>( assetPath );
-                if( asset != null )
-                {
-                    assets.Add(asset);
-                }
-            }
-            return assets;
-        }
-        
     }
 }
 

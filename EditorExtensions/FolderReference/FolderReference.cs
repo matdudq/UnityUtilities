@@ -1,9 +1,7 @@
 ﻿using UnityEditor;
 using UnityEngine;
-#if UNITY_EDITOR
-#endif
 
-namespace Utilities
+namespace Utilities.Editor
 {
     /// <summary>
     /// Folder reference for editor scripts.

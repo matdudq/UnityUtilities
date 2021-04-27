@@ -3,7 +3,7 @@ using System.IO;
 using UnityEngine;
 using UnityEditor;
 
-namespace Utilities
+namespace Utilities.Editor
 {
     /// <summary>
     /// Custom property drawer that allows us to use 
